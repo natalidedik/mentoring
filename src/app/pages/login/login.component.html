@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Login Form</h2>
+  <form [formGroup]="loginForm">
+    <div class="form-group">
+      <label for="userId">User id:</label>
+      <input type="userId" class="form-control" formControlName="userId" id="userId" placeholder="Enter user id">
+    </div>
+    <div *ngIf="success" class="success">Success!</div>
+    <div *ngIf="error" class="error">Errors occur!</div>
+    <button type="submit" class="btn btn-default" (click)="login()">Login</button>
+  </form>
+</div>
